@@ -15,18 +15,26 @@ set colorcolumn=80
 " begin vundle config
 set nocompatible
 filetype off
+" set the runtime path to include Vundle and initialize
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
+" let Vundle manage Vundle, required
 Plugin 'VundleVim/Vundle.vim'
 
 " Add plugins here
 Plugin 'SirVer/ultisnips'
 Plugin 'honza/vim-snippets'
+Plugin 'elixir-editors/vim-elixir'
 
 call vundle#end()
 filetype plugin indent on
 " end vundle config
 
+" Brief help
+" :PluginList       - lists configured plugins
+" :PluginInstall    - installs plugins; append `!` to update or just :PluginUpdate
+" :PluginSearch foo - searches for foo; append `!` to refresh local cache
+" :PluginClean      - confirms removal of unused plugins; append `!` to auto-approve removal
 map <C-n> <Esc>:tab sp<Cr>
 map <Up> <Nop>
 map <Left> <Nop>
