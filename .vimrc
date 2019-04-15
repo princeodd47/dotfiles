@@ -10,7 +10,7 @@ set laststatus=2
 set number 
 set hidden 
 set tags=./tags;,tags;$HOME 
-set colorcolumn=80
+set colorcolumn=120
 
 " begin vundle config
 set nocompatible
@@ -53,3 +53,8 @@ autocmd Filetype scss setlocal tabstop=2 shiftwidth=2
 
 autocmd Filetype make setlocal noexpandtab shiftwidth=8 softtabstop=0
 au BufNewFile,BufRead Jenkinsfile setf groovy
+
+" beautify json
+command! PrettyPrintJSON %!python -m json.tool
+command! PrettyPrintHTML !tidy -mi -html -wrap 0 %
+command! PrettyPrintXML !tidy -mi -xml -wrap 0 %
