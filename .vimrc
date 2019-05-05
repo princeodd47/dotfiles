@@ -1,3 +1,9 @@
+if empty(glob('~/.vim/autoload/plug.vim'))
+  silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
+    \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+  autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
+endif
+
 syntax on 
 set background=dark 
 
@@ -12,21 +18,18 @@ set hidden
 set tags=./tags;,tags;$HOME 
 set colorcolumn=120
 
-" begin vundle config
+" begin plug config
 set nocompatible
 filetype off
 " set the runtime path to include Vundle and initialize
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
-" let Vundle manage Vundle, required
-Plugin 'VundleVim/Vundle.vim'
+call plug#begin('~/.vim/plugged')
 
 " Add plugins here
-Plugin 'SirVer/ultisnips'
-Plugin 'honza/vim-snippets'
-Plugin 'elixir-editors/vim-elixir'
+Plug 'SirVer/ultisnips'
+Plug 'honza/vim-snippets'
+Plug 'elixir-editors/vim-elixir'
 
-call vundle#end()
+call plug#end()
 filetype plugin indent on
 " end vundle config
 
