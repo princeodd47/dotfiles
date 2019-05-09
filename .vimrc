@@ -1,15 +1,16 @@
+" Install plug plugin manager if not installed
 if empty(glob('~/.vim/autoload/plug.vim'))
   silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
     \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
   autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
 endif
 
-syntax on 
+syntax enable 
 set background=dark 
+" colorscheme guardian
 
-let g:solarized_termcolors=256
-set t_Co=256
-" colorscheme solarized
+" let g:solarized_termcolors=256
+" set t_Co=256
 
 set shiftwidth=4 tabstop=4 expandtab 
 set laststatus=2 
@@ -17,21 +18,26 @@ set number
 set hidden 
 set tags=./tags;,tags;$HOME 
 set colorcolumn=120
+set splitright
+set splitbelow
 
-" begin plug config
+" begin vundle config
 set nocompatible
 filetype off
 " set the runtime path to include Vundle and initialize
+set rtp+=~/.vim/bundle/Vundle.vim
 call plug#begin('~/.vim/plugged')
 
 " Add plugins here
 Plug 'SirVer/ultisnips'
 Plug 'honza/vim-snippets'
 Plug 'elixir-editors/vim-elixir'
+Plug 'sjl/gundo.vim'
+Plug 'w0rp/ale'
 
 call plug#end()
 filetype plugin indent on
-" end vundle config
+" end plug config
 
 " Brief help
 " :PluginList       - lists configured plugins
@@ -53,6 +59,7 @@ autocmd Filetype ruby setlocal tabstop=2 shiftwidth=2
 autocmd Filetype eruby setlocal tabstop=2 shiftwidth=2 
 autocmd Filetype css setlocal tabstop=2 shiftwidth=2 
 autocmd Filetype scss setlocal tabstop=2 shiftwidth=2 
+autocmd Filetype groovy setlocal tabstop=2 shiftwidth=2
 
 autocmd Filetype make setlocal noexpandtab shiftwidth=8 softtabstop=0
 au BufNewFile,BufRead Jenkinsfile setf groovy
