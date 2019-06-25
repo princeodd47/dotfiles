@@ -50,6 +50,11 @@ map <Left> <Nop>
 map <Right> <Nop>
 map <Down> <Nop>
 imap jk <Esc>
+
+nnoremap <C-J> <C-W><C-J>
+nnoremap <C-K> <C-W><C-K>
+nnoremap <C-L> <C-W><C-L>
+nnoremap <C-H> <C-W><C-H>
   
 map <C-n> <Esc>:tab sp<Cr> 
   
@@ -68,3 +73,5 @@ au BufNewFile,BufRead Jenkinsfile setf groovy
 command! PrettyPrintJSON %!python -m json.tool
 command! PrettyPrintHTML !tidy -mi -html -wrap 0 %
 command! PrettyPrintXML !tidy -mi -xml -wrap 0 %
+
+set nofoldenable    " disable folding
