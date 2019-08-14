@@ -10,3 +10,13 @@ export NVM_DIR="$HOME/.nvm"
 export PATH=$PATH:$HOME/.local/bin/
 export PIPENV_PYPI_MIRROR=https://artifactory.adtran.com/artifactory/api/pypi/pypi/simple
 export EDITOR='vim'
+
+# tmux history fixing
+# avoid duplicates..
+export HISTCONTROL=ignoredups:erasedups
+
+# append history entries..
+shopt -s histappend
+
+# After each command, save and reload history
+export PROMPT_COMMAND="history -a; history -c; history -r; $PROMPT_COMMAND"
