@@ -6,7 +6,7 @@
 
 - link:
     ~/.vimrc: vimrc
-    ~/.bash_custom: bash_custom
+    ~/.bash_config: bash_config
     ~/.tmux.conf: tmux.conf
     ~/.gitconfig: gitconfig
 
