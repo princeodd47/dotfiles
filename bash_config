@@ -28,3 +28,9 @@ alias cat=bat
 export PATH="$HOME/.pyenv/bin:$PATH"
 eval "$(pyenv init -)"
 eval "$(pyenv virtualenv-init -)"
+
+# python user
+export PATH="$HOME/.local/bin:$PATH"
+
+# poetry
+export PATH="$HOME/.poetry/bin:$PATH"
