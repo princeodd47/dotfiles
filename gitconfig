@@ -17,3 +17,5 @@
 [user]
 	email = steven.powell@adtran.com
 	name = Steven Powell
+[merge]
+	tool = vimdiff

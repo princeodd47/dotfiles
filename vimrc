@@ -17,7 +17,7 @@ set laststatus=2
 set number 
 set hidden 
 set tags=./tags;,tags;$HOME 
-set colorcolumn=120
+set colorcolumn=100
 set splitright
 set splitbelow
 
@@ -37,6 +37,7 @@ Plug 'w0rp/ale'
 Plug 'tpope/vim-commentary'
 Plug 'airblade/vim-gitgutter'
 Plug 'kshenoy/vim-signature'
+Plug 'ycm-core/YouCompleteMe'
 
 call plug#end()
 filetype plugin indent on
@@ -65,6 +66,7 @@ nnoremap <C-H> <C-W><C-H>
 " nnoremap <F5><F5> :let _s=@/<Bar>:%s/\s\+$//e<Bar>:let @/=_s<Bar><CR>
 nnoremap <F5> :let _s=@/<Bar>:%s/\s\+$//e<Bar>:let @/=_s<Bar><CR>
 nnoremap <F6> gg=G
+nnoremap <F7> :GundoToggle<CR>
   
 map <C-n> <Esc>:tab sp<Cr> 
   
@@ -75,6 +77,7 @@ autocmd Filetype eruby setlocal tabstop=2 shiftwidth=2
 autocmd Filetype css setlocal tabstop=2 shiftwidth=2 
 autocmd Filetype scss setlocal tabstop=2 shiftwidth=2 
 autocmd Filetype groovy setlocal tabstop=2 shiftwidth=2
+autocmd Filetype yml setlocal tabstop=2 shiftwidth=2
 
 autocmd Filetype make setlocal noexpandtab shiftwidth=8 softtabstop=0
 au BufNewFile,BufRead Jenkinsfile setf groovy

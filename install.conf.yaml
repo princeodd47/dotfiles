@@ -9,6 +9,7 @@
     ~/.bash_custom: bash_custom
     ~/.tmux.conf: tmux.conf
     ~/.gitconfig: gitconfig
+    ~/.config/flake8: flake8
 
 - shell:
     - [git submodule update --init --recursive, Installing submodules]
