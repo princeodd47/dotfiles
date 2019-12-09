@@ -1,3 +1,4 @@
+# bash-git-prompt
 if [ -f "$HOME/.bash-git-prompt/gitprompt.sh" ]; then
     GIT_PROMPT_ONLY_IN_REPO=1
     source $HOME/.bash-git-prompt/gitprompt.sh
@@ -21,6 +22,11 @@ shopt -s histappend
 # After each command, save and reload history
 export PROMPT_COMMAND="history -a; history -c; history -r; $PROMPT_COMMAND"
 
+<<<<<<< HEAD:bash_custom
+=======
+alias cat=bat
+
+>>>>>>> 998bff6e4da16edd7f41f14b389d94acf81a2ff2:bash_config
 # pyenv
 export PATH="$HOME/.pyenv/bin:$PATH"
 eval "$(pyenv init -)"
@@ -28,3 +34,9 @@ eval "$(pyenv virtualenv-init -)"
 
 # python user
 export PATH="$HOME/.local/bin:$PATH"
+<<<<<<< HEAD:bash_custom
+=======
+
+# poetry
+export PATH="$HOME/.poetry/bin:$PATH"
+>>>>>>> 998bff6e4da16edd7f41f14b389d94acf81a2ff2:bash_config
