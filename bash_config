@@ -34,4 +34,3 @@ export PATH="$HOME/.local/bin:$PATH"
 
 # poetry
 export PATH="$HOME/.poetry/bin:$PATH"
->>>>>>> 998bff6e4da16edd7f41f14b389d94acf81a2ff2:bash_config
