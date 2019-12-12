@@ -17,15 +17,9 @@ set laststatus=2
 set number 
 set hidden 
 set tags=./tags;,tags;$HOME 
-set colorcolumn=100
 set splitright
 set splitbelow
 
-" begin vundle config
-set nocompatible
-filetype off
-" set the runtime path to include Vundle and initialize
-set rtp+=~/.vim/bundle/Vundle.vim
 call plug#begin('~/.vim/plugged')
 
 " Add plugins here
@@ -33,7 +27,7 @@ Plug 'SirVer/ultisnips'
 Plug 'honza/vim-snippets'
 Plug 'elixir-editors/vim-elixir'
 Plug 'sjl/gundo.vim'
-Plug 'w0rp/ale'
+Plug 'dense-analysis/ale'
 Plug 'tpope/vim-commentary'
 Plug 'airblade/vim-gitgutter'
 Plug 'kshenoy/vim-signature'
