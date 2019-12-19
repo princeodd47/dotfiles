@@ -32,6 +32,7 @@ Plug 'tpope/vim-commentary'
 Plug 'airblade/vim-gitgutter'
 Plug 'kshenoy/vim-signature'
 Plug 'ycm-core/YouCompleteMe'
+Plug 'tmhedberg/SimpylFold'
 
 call plug#end()
 filetype plugin indent on
@@ -81,4 +82,8 @@ command! PrettyPrintJSON %!python -m json.tool
 command! PrettyPrintHTML !tidy -mi -html -wrap 0 %
 command! PrettyPrintXML !tidy -mi -xml -wrap 0 %
 
-set nofoldenable    " disable folding
+" SimplylFold
+" enable docstring preview in fold
+let g:SimpylFold_docstring_preview = 1
+
+" set nofoldenable    " disable folding
