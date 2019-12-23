@@ -27,11 +27,10 @@ Plug 'SirVer/ultisnips'
 Plug 'honza/vim-snippets'
 Plug 'elixir-editors/vim-elixir'
 Plug 'sjl/gundo.vim'
-Plug 'dense-analysis/ale'
+Plug 'w0rp/ale'
 Plug 'tpope/vim-commentary'
 Plug 'airblade/vim-gitgutter'
 Plug 'kshenoy/vim-signature'
-Plug 'ycm-core/YouCompleteMe'
 Plug 'tmhedberg/SimpylFold'
 
 call plug#end()
