@@ -33,3 +33,9 @@ export PATH="$HOME/.local/bin:$PATH"
 
 # poetry
 export PATH="$HOME/.poetry/bin:$PATH"
+
+# disable using cowsay in ansible
+export ANSIBLE_NOCOWS=1
+
+# diff-so-fancy
+export PATH=$PATH:$HOME/.diff-so-fancy/
