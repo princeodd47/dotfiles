@@ -12,9 +12,9 @@
     ~/.config/flake8: flake8
     ~/.config/git/ignore: gitignore_global
     ~/.config/pycodestyle: pycodestyle
-    ~/.config/nvim/init.vim: .config/nvim/init.vim
-    ~/.config/nvim/plugins.lua: .config/nvim/lua/plugins.lua
-    ~/.config/nvim/keymapper.lua: .config/nvim/lua/keymapper.lua
+    ~/.config/nvim/init.vim: nvim/init.vim
+    ~/.config/nvim/lua/plugins.lua: nvim/plugins.lua
+    ~/.config/nvim/lua/keymapper.lua: nvim/keymapper.lua
 
 - shell:
     - [git submodule update --init --recursive, Installing submodules]
