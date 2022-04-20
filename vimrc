@@ -23,7 +23,7 @@ set splitbelow
 call plug#begin('~/.vim/plugged')
 
 " Add plugins here
-Plug 'SirVer/ultisnips'
+" Plug 'SirVer/ultisnips'
 Plug 'honza/vim-snippets'
 Plug 'elixir-editors/vim-elixir'
 Plug 'sjl/gundo.vim'

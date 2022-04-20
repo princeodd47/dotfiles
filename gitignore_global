@@ -6,3 +6,6 @@
 
 # pyenv
 .python-version
+
+# python 2to3 backup files
+*.py.bak
