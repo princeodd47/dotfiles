@@ -32,8 +32,16 @@ return packer.startup(function(use)
   use 'sjl/gundo.vim'
   use 'airblade/vim-gitgutter' -- git status on left
   use 'kshenoy/vim-signature'
-  use 'tmhedberg/SimpylFold' -- folding to collapse code blocks
-  use 'vim-airline/vim-ariline' -- status bar at bottom
+  use 'vim-airline/vim-airline' -- status bar at bottom
+  use 'vim-airline/vim-airline-themes' -- status bar at bottom
+  use 'ryanoasis/vim-devicons' -- font icons
+
+  -- treesitter for highlighting and folding
+  use {
+    'nvim-treesitter/nvim-treesitter',
+    run = ":TSUpdate",
+  }
+  use 'p00f/nvim-ts-rainbow' -- rainbow highlight nested parentheses
 
   -- LSP
   use {
@@ -41,19 +49,20 @@ return packer.startup(function(use)
     requires = {
       -- LSP support
       {'neovim/nvim-lspconfig'},
-      {'williamboman/vnim-lsp-installer'},
+      {'williamboman/nvim-lsp-installer'},
 
       -- Autocompletion
-      {'hrsh7th/nvim-cmp'},
-      {'hrsh7th/cmp-buffer'},
-      {'hrsh7th/cmp-path'},
+      {'hrsh7th/nvim-cmp'}, -- completion plugin
+      {'hrsh7th/cmp-buffer'}, -- buffer completions
+      {'hrsh7th/cmp-cmdline'}, -- cmdline completions
       {'hrsh7th/cmp-nvim-lsp'},
       {'hrsh7th/cmp-nvim-lua'},
-      {'saadparwaiz1/cmp_luasnip'},
+      {'hrsh7th/cmp-path'}, -- path completions
+      {'saadparwaiz1/cmp_luasnip'}, -- snippet completions
 
       -- Snippets
-      {'L3MON4D3/LuaSnip'},
-      {'rafamadriz/friendly-snippets'},
+      {'L3MON4D3/LuaSnip'}, -- snippet engine
+      {'rafamadriz/friendly-snippets'}, -- a bunch of snippets to use
     }
   }
 

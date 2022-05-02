@@ -1,3 +1,7 @@
+-- Keymap shortcuts
+local keymap = vim.api.nvim_set_keymap
+local opts = { noremap = true, silent = true }
+
 local key_mapper = function(mode, key, result)
   vim.api.nvim_set_keymap(
     mode,
@@ -7,15 +11,17 @@ local key_mapper = function(mode, key, result)
   )
 end
 
--- lsp-zero default keymapping
-key_mapper('n', 'gd', ':lua vim.lsp.buf.definition()<CR>')
-key_mapper('n', 'gD', ':lua vim.lsp.buf.declaration()<CR>')
-key_mapper('n', 'gi', ':lua vim.lsp.buf.implementaion()<CR>')
-key_mapper('n', 'gw', ':lua vim.lsp.buf.document_symbol()<CR>')
-key_mapper('n', 'gW', ':lua vim.lsp.buf.workspace_symbol()<CR>')
-key_mapper('n', 'gr', ':lua vim.lsp.buf.references()<CR>')
-key_mapper('n', 'gt', ':lua vim.lsp.buf.type_definition()<CR>')
-key_mapper('n', 'K', ':lua vim.lsp.buf.buf.hover()<CR>')
-key_mapper('n', '<c-k>', ':lua vim.lsp.buf.signature_help()<CR>')
-key_mapper('n', '<leader>af', ':lua vim.lsp.buf.codeaction()<CR>')
-key_mapper('n', '<leader>rn', ':lua vim.lsp.buf.rename()<CR>')
+-- Additional escape keys
+keymap("i", "jk", "<ESC>", opts)
+
+-- Disable arrow keys
+keymap("n", "<Up>", "<Nop>", opts)
+keymap("n", "<Left>", "<Nop>", opts)
+keymap("n", "<Right>", "<Nop>", opts)
+keymap("n", "<Down>", "<Nop>", opts)
+
+-- Split shortcuts
+keymap("n", "<C-j>", "<C-w>j", opts)
+keymap("n", "<C-k>", "<C-w>k", opts)
+keymap("n", "<C-l>", "<C-w>l", opts)
+keymap("n", "<C-h>", "<C-w>h", opts)

@@ -13,8 +13,11 @@
     ~/.config/git/ignore: gitignore_global
     ~/.config/pycodestyle: pycodestyle
     ~/.config/nvim/init.vim: nvim/init.vim
-    ~/.config/nvim/lua/plugins.lua: nvim/plugins.lua
+    ~/.config/nvim/lua/cmp.lua: nvim/cmp.lua
     ~/.config/nvim/lua/keymapper.lua: nvim/keymapper.lua
+    ~/.config/nvim/lua/lsp.lua: nvim/lsp.lua
+    ~/.config/nvim/lua/plugins.lua: nvim/plugins.lua
+    ~/.config/nvim/lua/treesitter.lua: nvim/treesitter.lua
 
 - shell:
     - [git submodule update --init --recursive, Installing submodules]

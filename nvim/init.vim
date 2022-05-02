@@ -15,29 +15,68 @@ set shiftwidth=2
 set expandtab 
 set laststatus=2 
 
-" Packer plugin manager
-" install directory: ~/.local/share/nvim/site/pack/packer/start
-lua require('plugins')
+" lua config files
 lua require('keymapper')
+lua require('lsp')
+lua require('plugins')
+lua require('treesitter')
 
-" Additional escape key for staying on home row
-imap jk <Esc>
+"devicons config
+set encoding=UTF-8
 
-"Disable arrow keys
-map <Up> <Nop>
-map <Left> <Nop>
-map <Right> <Nop>
-map <Down> <Nop>
+" air-line font config
+let g:airline_powerline_fonts = 1
 
-" Split shortcuts
-nnoremap <C-J> <C-W><C-J>
-nnoremap <C-K> <C-W><C-K>
-nnoremap <C-L> <C-W><C-L>
-nnoremap <C-H> <C-W><C-H>
+if !exists('g:airline_symbols')
+    let g:airline_symbols = {}
+endif
 
-" SimplylFold
-" enable docstring preview in fold
-let g:SimpylFold_docstring_preview = 1
+" unicode symbols
+let g:airline_left_sep = '»'
+let g:airline_left_sep = '▶'
+let g:airline_right_sep = '«'
+let g:airline_right_sep = '◀'
+let g:airline_symbols.colnr = ' ㏇:'
+let g:airline_symbols.colnr = ' ℅:'
+let g:airline_symbols.crypt = '🔒'
+let g:airline_symbols.linenr = '☰'
+let g:airline_symbols.linenr = ' ␊:'
+let g:airline_symbols.linenr = ' ␤:'
+let g:airline_symbols.linenr = '¶'
+let g:airline_symbols.maxlinenr = ''
+let g:airline_symbols.maxlinenr = '㏑'
+let g:airline_symbols.branch = '⎇'
+let g:airline_symbols.paste = 'ρ'
+let g:airline_symbols.paste = 'Þ'
+let g:airline_symbols.paste = '∥'
+let g:airline_symbols.spell = 'Ꞩ'
+let g:airline_symbols.notexists = 'Ɇ'
+let g:airline_symbols.whitespace = 'Ξ'
+
+" powerline symbols
+let g:airline_left_sep = ''
+let g:airline_left_alt_sep = ''
+let g:airline_right_sep = ''
+let g:airline_right_alt_sep = ''
+" let g:airline_left_sep = ''
+" let g:airline_left_alt_sep = ''
+" let g:airline_right_sep = ''
+" let g:airline_right_alt_sep = ''
+let g:airline_symbols.branch = ''
+let g:airline_symbols.colnr = ' :'
+let g:airline_symbols.readonly = ''
+let g:airline_symbols.linenr = ' :'
+let g:airline_symbols.maxlinenr = '☰ '
+let g:airline_symbols.dirty='⚡'
+
+" old vim-powerline symbols
+let g:airline_left_sep = '⮀'
+let g:airline_left_alt_sep = '⮁'
+let g:airline_right_sep = '⮂'
+let g:airline_right_alt_sep = '⮃'
+let g:airline_symbols.branch = '⭠'
+let g:airline_symbols.readonly = '⭤'
+let g:airline_symbols.linenr = '⭡'
 
 " set tags=./tags;,tags;$HOME 
 
@@ -68,5 +107,3 @@ let g:SimpylFold_docstring_preview = 1
 " command! PrettyPrintJSON %!python -m json.tool
 " command! PrettyPrintHTML !tidy -mi -html -wrap 0 %
 " command! PrettyPrintXML !tidy -mi -xml -wrap 0 %
-
-" set nofoldenable    " disable folding
